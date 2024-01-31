@@ -55,12 +55,19 @@ select {
 button {
   font-size: 16px;
   padding: 8px 15px;
-  background-color: #3498db;
+  background-color: #ff0000; /* Hitam */
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+button:hover {
+  background-color: #fff; /* Putih saat hover */
+  color: #ff0000;
+  border: 1px solid #ff0000;
 }
 
 .layar {
@@ -70,7 +77,7 @@ button {
 
 .seats {
   display: flex;
-  justify-content: center; /* Menengahkan elemen secara horizontal */
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -86,9 +93,9 @@ button {
 }
 
 .seat.empty {
-  background-color: #5cb85c; /* Hijau - kursi kosong */
+  background-color: #5cb85c;
 }
 
 .seat.occupied {
-  background-color: #d9534f; /* Merah - kursi terisi */
+  background-color: #d9534f;
 }

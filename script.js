@@ -6,8 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
         loginForm.style.display = "none";
         seatsContainer.style.display = "flex";
 
+        // Hapus semua elemen kursi sebelum membuat kursi baru
+        seatsContainer.innerHTML = '';
+
         // Membuat kursi bioskop awal
-        const rows = ['A', 'B', 'C', 'D', 'E', 'F'];
+        const rows = ['A', 'B', 'C', 'D', 'E',];
         for (let row of rows) {
             for (let i = 1; i <= 6; i++) {
                 createSeat(row + i);
@@ -66,3 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
         showSeats();
     }
 });
+
+function backToRoleSelection() {
+    document.getElementById("seats-container").style.display = "none";
+    document.getElementById("login-form").style.display = "block";
+}
